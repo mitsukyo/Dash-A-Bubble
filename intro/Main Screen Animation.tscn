@@ -1,0 +1,130 @@
+[gd_scene load_steps=17 format=3 uid="uid://bqwe6x6p7ttxm"]
+
+[ext_resource type="Texture2D" uid="uid://bysk12kllgtne" path="res://Pink Bubble Tea Desktop Wallpaper (5).png" id="1_e1n1y"]
+[ext_resource type="Texture2D" uid="uid://5pc28d6p8kvb" path="res://Bubbles/Bubble Faces/Moving/Face 1/IMG_5034.PNG" id="2_k7up1"]
+[ext_resource type="Texture2D" uid="uid://cdkb8phntsg53" path="res://3.png" id="3_qojyl"]
+[ext_resource type="Texture2D" uid="uid://d3ggwf8bd7yvw" path="res://Bubbles/Bubble Faces/Moving/Face 2/Flipped/IMG_5039.PNG(flipped 1).PNG" id="4_i8b7n"]
+[ext_resource type="Texture2D" uid="uid://cqeu0vh1n328r" path="res://Bubbles/Bubble Faces/Moving/Face 2/Flipped/IMG_5042(flipped 4).PNG" id="5_b1ft8"]
+[ext_resource type="Texture2D" uid="uid://bptcxs1erf4t" path="res://Bubbles/Bubble Faces/Moving/Face 2/Flipped/IMG_5042(flipped 5).PNG" id="6_0bpn6"]
+[ext_resource type="Texture2D" uid="uid://bwheybeywsn4y" path="res://Bubbles/Bubble Faces/Moving/Face 2/Flipped/IMG_5041(flipped 3).PNG" id="7_7klvx"]
+[ext_resource type="Texture2D" uid="uid://b5y6cp3v25qqn" path="res://Bubbles/Bubble Faces/Moving/Face 1/IMG_5035.PNG" id="8_6e5g8"]
+[ext_resource type="Texture2D" uid="uid://dad7hpo72dl3u" path="res://Bubbles/Bubble Faces/Moving/Face 1/IMG_5036.PNG" id="9_m85lf"]
+[ext_resource type="Texture2D" uid="uid://b4k20cvplc0sx" path="res://Bubbles/Bubble Faces/Moving/Face 1/IMG_5037.PNG" id="10_ea0mi"]
+[ext_resource type="Texture2D" uid="uid://pn66vyjf5sp" path="res://Bubbles/Bubble Faces/Moving/Face 1/IMG_5038.PNG" id="11_vdlad"]
+[ext_resource type="Texture2D" uid="uid://mrobkundjkjw" path="res://Bubbles/Bubble1.png" id="12_gs32c"]
+[ext_resource type="Texture2D" uid="uid://bq4jbtmmhdomb" path="res://Bubbles/Bubble2.png" id="13_yqf4m"]
+
+[sub_resource type="Animation" id="Animation_f2qyx"]
+resource_name = "Face 1"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Img5039_png(flipped1):texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.00833333, 0.366667, 1.58333, 1.78333, 1.875, 2.00833, 2.1, 2.475, 2.63333, 2.73333, 2.86667, 2.93333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("4_i8b7n"), ExtResource("5_b1ft8"), ExtResource("6_0bpn6"), ExtResource("4_i8b7n"), ExtResource("7_7klvx"), ExtResource("7_7klvx"), ExtResource("5_b1ft8"), ExtResource("6_0bpn6"), ExtResource("4_i8b7n"), ExtResource("7_7klvx"), ExtResource("7_7klvx"), ExtResource("5_b1ft8")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.2, 0.3, 0.366667, 0.5, 0.666667, 2.28099, 2.4, 2.56667, 2.7, 2.825),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_k7up1"), ExtResource("8_6e5g8"), ExtResource("9_m85lf"), ExtResource("10_ea0mi"), ExtResource("11_vdlad"), ExtResource("10_ea0mi"), ExtResource("2_k7up1"), ExtResource("9_m85lf"), ExtResource("8_6e5g8"), ExtResource("9_m85lf"), ExtResource("10_ea0mi"), ExtResource("11_vdlad")]
+}
+
+[sub_resource type="Animation" id="Animation_chr2n"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Img5039_png(flipped1):texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_i8b7n")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_k7up1")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7frp"]
+_data = {
+"Face 1": SubResource("Animation_f2qyx"),
+"RESET": SubResource("Animation_chr2n")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, -5)
+
+[node name="PinkBubbleTeaDesktopWallpaper(5)" type="Sprite2D" parent="."]
+position = Vector2(575, 329)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_e1n1y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(199, 157)
+scale = Vector2(0.601389, 0.601389)
+texture = ExtResource("2_k7up1")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(586.167, 181.656)
+scale = Vector2(0.259769, 0.259769)
+texture = ExtResource("3_qojyl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x7frp")
+}
+autoplay = "Face 1"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 5)
+anchor_mode = 0
+
+[node name="Bubble1 Sprite" type="Sprite2D" parent="Camera2D"]
+position = Vector2(19, 553)
+scale = Vector2(0.217, 0.217)
+texture = ExtResource("12_gs32c")
+
+[node name="Bubble2 Sprite" type="Sprite2D" parent="Camera2D"]
+position = Vector2(151, 618)
+scale = Vector2(0.232, 0.232)
+texture = ExtResource("13_yqf4m")
+
+[node name="Bubble3" type="Sprite2D" parent="Camera2D"]
+position = Vector2(1050, 196)
+scale = Vector2(0.165, 0.165)
+texture = ExtResource("12_gs32c")
+
+[node name="Bubble4" type="Sprite2D" parent="Camera2D"]
+position = Vector2(224, 483)
+scale = Vector2(0.144, 0.144)
+texture = ExtResource("13_yqf4m")
+
+[node name="Img5039_png(flipped1)" type="Sprite2D" parent="."]
+position = Vector2(983, 453)
+scale = Vector2(0.610417, 0.610417)
+texture = ExtResource("4_i8b7n")
